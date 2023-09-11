@@ -1,0 +1,50 @@
+First, download the latest version of Firefox nightly using the following command:
+
+wget -o firefox.tar.bz2 'https://download.mozilla.org/?product=firefox-nightly-latest-ssl&os=linux64&lang=en-US'
+
+Next, extract the file using the tar command:
+
+tar xvf firefox.tar.bz2
+
+After the file is finished extracting, run the following command to move the files to the proper directory:
+
+sudo mv firefox /opt
+
+and enter your password and then press ENTER when prompted.
+
+Now, run the following command to link your files:
+
+sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox-nightly
+
+Firefox is currently installed. You can run firefox by executing the following command in a terminal:
+
+firefox-nightly &
+
+PART TWO
+
+The following method will create a "desktop file" so that Firefox will show up in your list of installed applications and you won't have to run firefox from the terminal.
+
+First, run the following command to create and edit the file using the nano text editor:
+
+nano ~/.local/share/applications/firefox-nightly.desktop
+
+Next, copy and paste the following contents into the terminal:
+
+[Desktop Entry]
+Name=Firefox Nightly
+Comment=Web Browser
+Exec=/opt/firefox/firefox %u
+Terminal=false
+Type=Application
+Icon=/opt/firefox/browser/chrome/icons/default/default128.png
+Categories=Network;WebBrowser;
+
+Now, press CTRL+o to save the file and press CTRL+x to exit nano.
+
+Finally, log out and log back in to refresh your list of installed applications.
+
+PART THREE (only needed if you have disabled automatic updates)
+
+To update Firefox nightly, click on the "hamburger" menu icon.
+
+On the dropdown menu, click Help > About Nightly and it should show an option if Firefox is not up to date.

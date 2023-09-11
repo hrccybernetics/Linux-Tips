@@ -1,0 +1,23 @@
+Problem statement :
+To Enable Auto-completion in zsh
+ 
+Solution:
+[step 1:  Add the following lines to your .bashrc file (directory switching) ]
+
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+
+[step 2:  Add the following lines to your .bashrc file (auto-complete command from the history file. Use up arrow and down arrow) ]
+
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+[step 3:  Run "source .bashrc" - This will load the autocompletion configuration from bashrc file ]
+
+
+#-------------------------------------------
+virsh no default network problem--
+# virsh net-define default.xml
+# virsh net-start default
+# virsh net-autostart default  (if you want it to run on boot)
+#----------------------------------------------

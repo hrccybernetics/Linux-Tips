@@ -1,0 +1,4 @@
+Firefox Tweaks: set them to true
+about:config
+layers.acceleration.force-enabled
+gfx.webrender.all
