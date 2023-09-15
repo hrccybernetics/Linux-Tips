@@ -7,5 +7,6 @@ ________________________________________________
 * Firefox youtube video lag fix
 * Firefox Nightly Installation instruction
 * Tmux - copy and paste out of Clipboard
+* Debian - Adding Kali Repo (FrakenDebian)
 
 -------------------------------------------------
