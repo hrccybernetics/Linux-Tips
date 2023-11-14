@@ -8,5 +8,6 @@ ________________________________________________
 * Firefox Nightly Installation instruction
 * Tmux - copy and paste out of Clipboard
 * Debian - Adding Kali Repo (FrakenDebian)
+* Run GUI apps via PODMAN
 
 -------------------------------------------------
