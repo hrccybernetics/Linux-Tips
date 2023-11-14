@@ -1,0 +1,7 @@
+# Run GUI apps via Podman 
+podman run -it --network host --env DISPLAY --security-opt label=type:container_runtime_t --name <container name>
+
+Example
+podman run -it --network host --env DISPLAY --security-opt label=type:container_runtime_t --name myContainer fedora
+
+This Works on Both X11 and Wayland
