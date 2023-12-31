@@ -1,0 +1,8 @@
+# Issue link : https://ubuntuforums.org/showthread.php?t=1325021&page=3&p=8391161#post8391161
+# This may solve the issue
+# Some Games requires visualbasic and dx9,10,11
+# Install Wine, Wine64, Winetricks
+sudo apt install wine wine64 winetricks
+winetricks mfc4
+winetricks vcrun6
+cabextract -F mfc42.dll vcredist.exe
