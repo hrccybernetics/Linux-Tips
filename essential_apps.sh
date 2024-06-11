@@ -67,4 +67,5 @@ figlet "Restarting in . . ."
 figlet "3"
 figlet "2"
 figlet "1"
-sudo reboot now
+echo "Everything set to GO -- Please Reboot your machine"
+#sudo reboot now
