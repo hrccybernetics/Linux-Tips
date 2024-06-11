@@ -1,0 +1,17 @@
+" set line number
+set number
+set relativenumber 
+" Status bar
+set laststatus=2
+
+" Set compatibility to Vim only
+" set nocompatible
+
+" Set line wrap without entending
+set wrap
+
+" Syntax highlight
+syntax on
+
+" colorscheme [tab] desert
+colorscheme desert
