@@ -1,0 +1,36 @@
+This is for my personal use: If anyone add issues with VM and non-lts kernel - this will work ( but not sure with rt-linux-imagae and zen based )
+
+    Check the version of your installed VMware Player.
+
+    vmplayer --version
+
+    Get the version of your currently running kernel, in case there are multiple modules compiled for different kernel versions
+
+    uname -r
+
+    Download the appropriate vmmon and vmnet modules.
+
+    Visit: https://github.com/mkubecek/vmware-host-modules/tags
+
+    Download the appropriate module file depending on your Vmware Player version (and optionally kernel version). In this case I am running VMware Player ver. 16.2.4 and a kernel ver. of 5.19, so I would download the p16.2.4-k5.19 file. Here “p” stands for player (if you have the VMware Workstation instead, then you would download the one starting with a “w”):
+
+Download VMware (Player and Workstation) host modules
+Download VMware (Player and Workstation) host modules
+
+    Extract the tarball file, create the tar module files and copy them over to the vmware’s source modules directory
+
+    tar -xvf vmware-host-modules-w16.2.4-k5.19.tar.gz
+    cd vmware-host-modules-w16.2.4-k5.19
+    tar -cf vmmon.tar vmmon-only
+    tar -cf vmnet.tar vmnet-only
+    sudo cp -v vmmon.tar vmnet.tar /usr/lib/vmware/modules/source/
+
+    Install the modules
+
+    sudo vmware-modconfig --console --install-all
+
+You should be able to launch VMware normally now.
+
+
+
+Refer original post :: https://dimitar.me/how-to-fix-vmware-unable-to-install-all-modules-vmmon-vmnet/
