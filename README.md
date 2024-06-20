@@ -10,6 +10,7 @@ ________________________________________________
 * Debian - Adding Kali Repo (FrakenDebian)
 * Run GUI apps via PODMAN
 * vimrc lite
+* VMware-vmon/vmnet configuration
 # TO - DO (need to be added)
 * Tmux copy-paste using xclip
 
