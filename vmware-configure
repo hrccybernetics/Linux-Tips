@@ -25,6 +25,13 @@ Download VMware (Player and Workstation) host modules
     tar -cf vmnet.tar vmnet-only
     sudo cp -v vmmon.tar vmnet.tar /usr/lib/vmware/modules/source/
 
+## Open /usr/lib/vmware/modules/source/vmmon-only/include/pgtbl.h add these changes and save
+## change pte = pte_offset_map(pmd,addr); to pte = pte_offset_kernel(pmd, addr);
+##Open /usr/lib/vmware/modules/source/vmnet-only/bridge.c and...
+Add these two lines below #include <linux/etherdevice.h>
+#include <net/gso.h>
+#include <linux/inetdevice.h>
+
     Install the modules
 
     sudo vmware-modconfig --console --install-all
