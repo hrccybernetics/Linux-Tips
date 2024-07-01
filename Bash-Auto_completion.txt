@@ -15,9 +15,4 @@ bind '"\e[B": history-search-forward'
 [step 3:  Run "source .bashrc" - This will load the autocompletion configuration from bashrc file ]
 
 
-#-------------------------------------------
-virsh no default network problem--
-# virsh net-define default.xml
-# virsh net-start default
-# virsh net-autostart default  (if you want it to run on boot)
-#----------------------------------------------
+
