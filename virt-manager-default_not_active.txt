@@ -1,0 +1,8 @@
+#-------------------------------------------
+virsh no default network problem--
+# virsh net-define /usr/share/libvirt/networks/default.xml
+or
+# virsh net-define default.xml
+# virsh net-start default
+# virsh net-autostart default  (if you want it to run on boot)
+#----------------------------------------------
