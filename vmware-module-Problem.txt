@@ -1,0 +1,9 @@
+vmware-module compile 
+
+git clone https://github.com/mkubecek/vmware-host-modules.git
+cd vmware-host-modules
+git checkout workstation-16.2.1
+make
+make install
+/etc/init.d/vmware start
+
