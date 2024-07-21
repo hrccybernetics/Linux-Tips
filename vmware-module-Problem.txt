@@ -7,3 +7,16 @@ make
 make install
 /etc/init.d/vmware start
 
+
+Direct download links :
+
+
+VMware Workstation: https://softwareupdate.vmware.com/cds/vmw-desktop/ws/
+
+VMware Player: https://softwareupdate.vmware.com/cds/vmw-desktop/player/
+
+VMware Fusion: https://softwareupdate.vmware.com/cds/vmw-desktop/fusion/
+
+VMware Tools:
+https://softwareupdate.vmware.com/cds/vmw-desktop/ws/17.5.2/23775571/linux/packages/
+https://softwareupdate.vmware.com/cds/vmw-desktop/ws/17.5.2/23775571/windows/packages/
