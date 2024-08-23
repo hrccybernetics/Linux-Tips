@@ -12,7 +12,6 @@ ________________________________________________
 * vimrc lite
 * VMware-vmon/vmnet configuration
 * Virt-manager "default" network not active or not found
-# TO - DO (need to be added)
-* Tmux copy-paste using xclip
+* LXC - Kali Linux Container Setup
 
 -------------------------------------------------
