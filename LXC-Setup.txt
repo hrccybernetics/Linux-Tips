@@ -40,16 +40,18 @@ lxc.net.0.type = none
 * Install x11 apps 
 sudo apt install x11-apps xauth
 
-* add below lines to .bashrc in container 
+* add below lines to .bashrc in HOST
 if [ "$DISPLAY" ]; then
     xhost +SI:localuser:root > /dev/null 2>&1
 fi
-export _JAVA_OPTIONS='-Dsun.java2d.xrender=false -Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true'
 
-* Add below lines in .bashrc in HOST system
+* Add below lines in .bashrc in Container
+export _JAVA_OPTIONS='-Dsun.java2d.xrender=false -Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true'
 export DISPLAY=:0
 
 * in Wayland use xwayland to get GUI
+Note : Mostly it should work out of the box
+or do export display again
 --------------------------------------------
 
 
