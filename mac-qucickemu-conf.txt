@@ -1,0 +1,2 @@
+cpu_cores=4
+ram="6G"

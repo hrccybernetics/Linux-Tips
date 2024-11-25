@@ -1,0 +1,6 @@
+Disable Suspend DEB
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+
+Enable Suspend DEB
+sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
+
