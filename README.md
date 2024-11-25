@@ -13,5 +13,7 @@ ________________________________________________
 * VMware-vmon/vmnet configuration
 * Virt-manager "default" network not active or not found
 * LXC - Kali Linux Container Setup
+* Add ram and cpu cores - quickemu
+* Remove and Add Suspend -Debian
 
 -------------------------------------------------
