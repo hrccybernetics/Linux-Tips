@@ -1,12 +1,19 @@
-#--> Setting up LXC container <--#
-----------------------------------
+#--- Setting Up LXC Container ( Kali Linux ) ---#
+----------#*#----------
+________Warning________
+- Use it at your own risk
+- Content author is not responsible for any data loss or system breaks
+- Not all tools are tested - they may not work properly
+- All these command are safe to use [if you have doubts, verify the command by Googling / Asking AI chats / explainshells]
+- If still in doubt - try in a Virtual Machine before installing in host 
+----------#*#----------
 * Install LXC
 sudo apt install lxc
 * Create a LXC Container 
 sudo lxc-create -n Kali-Linux -t download 
 * set the arch
 kali – current – amd64
------------------------------------
+----------#*#----------
 #--> Basic Command <--#
 * Start: sudo lxc-start -n Kali-Linux
 * Attach: sudo lxc-attach -n Kali-Linux
@@ -14,7 +21,7 @@ kali – current – amd64
 * List: sudo lxc-ls -f
 * Info: sudo lxc-info -n Kali-Linux
 * Remove: sudo lxc-destroy -n Kali-Linux
-------------------------------------
+----------#*#----------
 - GUI via RDP 
 * Attach into the container
 apt install kali-desktop-xfce xrdp
@@ -25,7 +32,7 @@ systemctl start xrdp
 * Connect using Remmina / xfreerdp / rdesktop
 Xfreerdp : xfreerdp /u:root /p:< your passwd > /v:< your IP >
 Rdesktop : rdesktop -u root -p < your passwd > <your IP>
---------------------------------------
+----------#*#----------
 - Share host network
 
 * Go to container location 
@@ -34,25 +41,27 @@ Comment the default network config and add
 lxc.net.0.type = none
 
 * Restart the container
-----------------------------------------
+----------#*#----------
 - Use Container's GUI apps in HOST ( Only works when we share host network )
 
-* Install x11 apps 
+* Install x11 apps in container
 sudo apt install x11-apps xauth
 
-* add below lines to .bashrc in HOST
+* add below lines to .bashrc in Host
 if [ "$DISPLAY" ]; then
     xhost +SI:localuser:root > /dev/null 2>&1
+    xhost +local: > /dev/null 2>&1
 fi
 
-* Add below lines in .bashrc in Container
+* Add below lines in .bashrc in LXC system
 export _JAVA_OPTIONS='-Dsun.java2d.xrender=false -Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true'
 export DISPLAY=:0
+export WAYLAND_DISPLAY=wayland-0
 
-* in Wayland use xwayland to get GUI
-Note : Mostly it should work out of the box
-or do export display again
---------------------------------------------
-
-
+* To set the permission presistent add these i /etc/profile 
+if [ "$DISPLAY" ]; then
+    xhost +SI:localuser:root > /dev/null 2>&1
+    xhost +local: > /dev/null 2>&1
+fi
+----------#*#----------
 
