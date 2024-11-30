@@ -6,6 +6,7 @@ ________Warning________
 - Not all tools are tested - they may not work properly
 - All these command are safe to use [if you have doubts, verify the command by Googling / Asking AI chats / explainshells]
 - If still in doubt - try in a Virtual Machine before installing in host 
+- Works well with x11 and wayland
 ----------#*#----------
 * Install LXC
 sudo apt install lxc
