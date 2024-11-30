@@ -65,4 +65,6 @@ if [ "$DISPLAY" ]; then
     xhost +local: > /dev/null 2>&1
 fi
 ----------#*#----------
-
+# USB Passthrough - Coming soon
+# GPU passthrough - i don't have a Desktop/Laptop with GPU (maybe later) 
+----------#*#----------
