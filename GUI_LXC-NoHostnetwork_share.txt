@@ -1,0 +1,47 @@
+Setup LXC GUI apps access via ssh
+---------------------------------
+update : apt update && apt upgrade
+create a user : adduser <user-name>
+add user to sudo group : usermod -aG sudo <user-name>
+
+switch to user : su <user-name>
+install ssh server : sudo apt install xauth openssh-server
+----------------------------------
+ON HOST add lines in below file
+/etc/ssh/ssh_config ( file name with location )
+	ForwardX11 yes 					# add these
+ 	ForwardX11Trusted yes				# add these
+	
+----------------------------------
+ON CONTAINER add lines in below file
+	X11Forwarding yes				# add these
+	X11UseLocalhost no				# add these
+
+* Now restart ssh server
+sudo systemctl restart ssh
+-----------------------------------
+
+In HOST run in Terminal
+
+xhost + 
+or
+xhost +<container_ip>
+
+or add "xhost +" or "xhost +<container_ip> in .bashrc file
+------------------------------------
+
+For wayland
+use 
+install in host : sudo apt install xwayland
+add in .bashrc : export WAYLAND_DISPLAY=wayland-0
+
+____________________________________
+|Untested:			   |
+|				   |
+|- use waypipe			   |
+|sudo apt install waypipe 	   |
+|waypipe ssh user@container_ip	   |
+|				   |
+|- use weston in x11		   |
+|sudo apt install weston	   |
+------------------------------------
