@@ -1,0 +1,16 @@
+Download & Install quickemu from below link 
+Download Your Respective version
+https://github.com/quickemu-project
+https://github.com/quickemu-project/quickgui/releases
+Add to OS-conf
+for CPU = "cpu_cores=x" # "x" Number of Cores based on your CPU
+for RAM = "ram=xG" # "x" for RAM
+
+After installing MAC OS 
+sudo trimforce enable 
+Go to Settings --> Network --> Delete all Default networks
+Open terminal
+"sudo rm /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist"
+reboot MAC VM
+
+sudo trimforce enable
