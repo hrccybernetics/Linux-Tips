@@ -64,6 +64,15 @@ if [ "$DISPLAY" ]; then
     xhost +SI:localuser:root > /dev/null 2>&1
     xhost +local: > /dev/null 2>&1
 fi
+-----------------------
+:: Make the file system (lxc - rootfs) mountable
+sudo mkdir /mnt/lxc-rootfs
+sudo mount --bind /var/lib/lxc/<container-name>/rootfs /mnt/lxc-rootfs
+
+Make changes Persistent
+sudo nano /etc/fstab
+**add the below line**
+/var/lib/lxc/<container-name>/rootfs /mnt/lxc-rootfs none bind 0 0
 ----------#*#----------
 # USB Passthrough - Coming soon
 # GPU passthrough - i don't have a Desktop/Laptop with GPU (maybe later) 
