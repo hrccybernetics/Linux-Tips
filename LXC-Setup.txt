@@ -39,8 +39,9 @@ Rdesktop : rdesktop -u root -p < your passwd > <your IP>
 * Go to container location 
 /var/lib/lxc/(container-name)/config
 Comment the default network config and add
-lxc.net.0.type = none
-
+#lxc.net.0.type = none
+lxc.net.0.type = empty
+sudo lxc-start -n (container-name) --share-net 1 
 * Restart the container
 ----------#*#----------
 - Use Container's GUI apps in HOST ( Only works when we share host network )
