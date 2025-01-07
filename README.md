@@ -2,7 +2,7 @@
                     Linux Tips                   
 ________________________________________________
 
-* Essential Apps 
+* Essential Apps -V2
 * Bash Auto completion - like zsh
 * Firefox youtube video lag fix
 * Firefox Nightly Installation instruction 
