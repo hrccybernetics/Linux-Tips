@@ -1,6 +1,7 @@
 echo "HC Cybernetics"
 echo "Debian Apps install - only works properly with debian and debian based distros"
-
+echo "Please run in user home directory"
+ 
 sudo dpkg --add-achitecture i386
 sudo apt update && sudo apt upgrade -y
 sudo apt install htop screenfetch cmatrix figlet cowsay git wget curl axel sed xsel tmux nano vim -y
