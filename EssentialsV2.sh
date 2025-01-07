@@ -94,7 +94,7 @@ echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] 
   
 sudo apt update && sudo apt install signal-desktop -y
 
-
+echo " logout and login... "
 
 
 
