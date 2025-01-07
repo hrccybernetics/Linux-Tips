@@ -4,7 +4,7 @@ echo "Please run in user home directory"
  
 sudo dpkg --add-achitecture i386
 sudo apt update && sudo apt upgrade -y
-sudo apt install htop screenfetch cmatrix figlet cowsay git wget curl axel sed xsel tmux nano vim papirus-icon-theme -y
+sudo apt install htop screenfetch cmatrix figlet cowsay git wget curl axel sed xsel tmux nano vim papirus-icon-theme stacer -y
 
 
 figlet "Flatpak"
