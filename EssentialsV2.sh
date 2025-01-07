@@ -40,6 +40,7 @@ sudo apt install atril -y
 flatpak install flathub org.onlyoffice.desktopeditors -y
 flatpak install flathub net.cozic.joplin_desktop -y
 flatpak install flathub net.giuspen.cherrytree -y
+flatpak install flathub org.mozilla.Thunderbird -y
 
 figlet "Virtual-Machines"
 sudo apt install virtualbox virtualbox-dkms virtualbox-ext-pack virtualbox-guest-utils -y
