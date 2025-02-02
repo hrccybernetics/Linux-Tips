@@ -1,0 +1,7 @@
+** virsh :
+virsh net-list --all    
+** if returns nothing :
+virsh net-define /usr/share/libvirt/networks/default.xml
+virsh net-autostart default
+virsh net-start default
+
