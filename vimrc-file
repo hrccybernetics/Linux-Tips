@@ -15,3 +15,12 @@ syntax on
 
 " colorscheme [tab] desert
 colorscheme desert
+
+" Terminal split below
+set splitbelow
+
+" Set terminal size
+set termwinsize=15x0
+
+"Set Lex 20
+let g:netrw_winsize = 20
