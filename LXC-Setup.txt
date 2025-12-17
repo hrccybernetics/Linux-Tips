@@ -57,6 +57,7 @@ fi
 
 * Add below lines in .bashrc in LXC system
 export _JAVA_OPTIONS='-Dsun.java2d.xrender=false -Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true'
+#export _JAVA_OPTIONS='-Dsun.java2d.opengl=true -Dsun.java2d.xrender=false -Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true -Dsun.java2d.pmoffscreen=true'
 export DISPLAY=:0
 export WAYLAND_DISPLAY=wayland-0
 
