@@ -49,5 +49,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }   " ← ADD THIS
 Plug 'junegunn/fzf.vim'             " fuzzy finder
 call plug#end()
 
-nnoremap <C-n> :Lex<CR>   " toggle file explorer
+" nnoremap <C-n> :Lex<CR>   " toggle file explorer
+nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-f> :Files<CR>
 nnoremap <C-t> :terminal<CR>
