@@ -1,0 +1,74 @@
+* {
+    background-color: rgba(20, 20, 20, 0.95);
+    text-color: #ffffff;
+    border-color: transparent;
+}
+
+window {
+    fullscreen: true;
+    padding: 60px;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    spacing: 30px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 12px 20px;
+    width: 40%;
+    expand: false;
+    horizontal-align: 0.5;
+}
+
+prompt {
+    enabled: true;
+    padding: 0px 8px 0px 0px;
+    text-color: #aaaaaa;
+}
+
+entry {
+    placeholder: "Search apps...";
+    placeholder-color: #666666;
+}
+
+listview {
+    layout: vertical;
+    grid-lines: false;
+    columns: 6;
+    lines: 4;
+    spacing: 20px;
+    scrollbar: false;
+    fixed-columns: true;
+}
+
+element {
+    orientation: vertical;
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    width: 120px;
+    expand: false;
+}
+
+element normal.normal {
+    background-color: transparent;
+}
+
+element selected.normal {
+    background-color: rgba(255,255,255,0.12);
+}
+
+element-icon {
+    size: 64px;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    padding: 8px 0px 0px 0px;
+    font: "Sans 10";
+}
