@@ -1,0 +1,11 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    drun-display-format: "{name}";
+    display-drun: "Apps";
+    columns: 6;
+    icon-theme: "hicolor";
+    font: "Sans 11";
+}
+
+@theme "~/.config/rofi/grid.rasi"
