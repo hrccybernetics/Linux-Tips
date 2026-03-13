@@ -49,7 +49,14 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }   " ← ADD THIS
 Plug 'junegunn/fzf.vim'             " fuzzy finder
 call plug#end()
 
+let $FZF_DEFAULT_COMMAND = 'fd --type f --type l --exclude .git'
+
 " nnoremap <C-n> :Lex<CR>   " toggle file explorer
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-f> :Files<CR>
 nnoremap <C-t> :terminal<CR>
+nnoremap <C-e> :e<Space>
+nnoremap <leader>s :split<CR>
+nnoremap <leader>v :vsplit<CR>
+ 
+
