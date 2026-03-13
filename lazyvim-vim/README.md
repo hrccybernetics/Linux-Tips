@@ -15,3 +15,7 @@ fuzz finder options in vim
 : Lines - search line in files
 : Ag
 
+add thos
+sudo apt install fd-find
+ln -s $(which fdfind) ~/.local/bin/fd
+
